@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>617</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Option Pricing Calculator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="KeyParams_GroupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>581</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="StockPrice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Underlying Price (S)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="StockPriceInput">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>10</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="StrikeInput">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>40</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Strike">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Strike Price (K)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="TimeInput">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>70</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Time">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Time to Maturity (T)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="RiskFreeRate">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>40</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Risk Free Rate (r)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="sigmaInput">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>10</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="RiskFreeInput">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>40</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sigma">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>10</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Volatility (s)</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="BT_GroupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>171</y>
+      <width>281</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Binomial Tree Input</string>
+    </property>
+    <widget class="QLineEdit" name="TimeStep_Input">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TimeStep">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Time Steps</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TimeStepMax_Button">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>39</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Max</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="MC_GroupBox">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>171</y>
+      <width>281</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Monte Carlo Input</string>
+    </property>
+    <widget class="QLabel" name="NumSim">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>39</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>No. of Simulations</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="NumSim_Input">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NumSimMax_Button">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>39</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Max</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>361</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <row>
+     <property name="text">
+      <string>Call Price</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Put Price</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>Black Scholes</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Binomial Tree</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Monte Carlo</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QRadioButton" name="EuropeanStyle_RadioButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>European</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="AmericanStyle_RadioButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>American</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="PricingModel_GroupBox">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>0</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Pricing Model</string>
+    </property>
+    <widget class="QCheckBox" name="MC_CheckBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>30</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Monte Carlo</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="BS_CheckBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Black Scholes</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="BT_CheckBox">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Binomial Tree</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="OptionStyle_GroupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Option Style</string>
+    </property>
+   </widget>
+   <zorder>OptionStyle_GroupBox</zorder>
+   <zorder>KeyParams_GroupBox</zorder>
+   <zorder>BT_GroupBox</zorder>
+   <zorder>MC_GroupBox</zorder>
+   <zorder>tableWidget</zorder>
+   <zorder>EuropeanStyle_RadioButton</zorder>
+   <zorder>AmericanStyle_RadioButton</zorder>
+   <zorder>PricingModel_GroupBox</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>617</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

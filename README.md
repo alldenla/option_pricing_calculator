@@ -40,7 +40,21 @@ poetry install
 
 3. Activate the virtual environment:
 ```bash
-poetry shell
+# Get the virtualenv path
+poetry env info --path
+
+# Activate it (macOS/Linux)
+source "$(poetry env info --path)/bin/activate"
+
+# When done, deactivate
+deactivate
+```
+
+Alternatively, use an in-project virtualenv for easier activation:
+```bash
+poetry config virtualenvs.in-project true --local
+poetry install
+source .venv/bin/activate
 ```
 
 ## Usage

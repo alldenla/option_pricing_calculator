@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Poetry virtual envs (useful to ignore local envs)
+.python-version
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# dotenv
+.env
+.env.*
+
+# mypy
+.mypy_cache/
+
+# profiling
+profiling/
+
+# logs
+*.log
+
+# compiled C files
+*.o
+
+# Local builds
+build/
+
+# Ignore generated Qt Designer ui files if you keep generated code elsewhere
+# option_pricing/ui/calculator_ui.py
+
+# End of file
